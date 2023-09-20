@@ -9,6 +9,7 @@ function App() {
     queryFn: () => api.getUsers(),
   });
 
+
   function handleedituser() {
     alert("vc clicou");
   }

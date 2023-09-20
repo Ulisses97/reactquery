@@ -11,6 +11,15 @@ user,
 handleedituser,
 }:IUserCardProps){
 
+  function formatDate(date: string){
+    const dataObj = new Date(date);
+
+    const day = dataObj.getDate().toString().padStart(2, '0');
+    const month = (dataObj.getMonth() + 1).toString().padStart(2, '0');
+    const year = dataObj.getFullYear();
+
+    return `${day}/${month}/${year}`
+  }
 
   return(
     <div 
@@ -31,7 +40,7 @@ handleedituser,
           </div>
           <div>
             <h3 className="text-[#3DC5EC]" >birthday</h3>
-            <h2 className="text-base text-white">1{user.birthdate}</h2>
+            <h2 className="text-base text-white">{formatDate(user.birthdate)}</h2>
           </div>
         </div>
         <img 
