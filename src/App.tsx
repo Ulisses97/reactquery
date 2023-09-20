@@ -19,13 +19,14 @@ function App() {
       style={{
         background: "linear-gradient(124deg, #2B1D50 2.32%, #471B50 103.61%)",
       }}
-      className=" w-full"
+      className="w-full"
     >
       <div className=" flex flex-col items-center justify-center gap-9">
       <h1 className="text-white text-4xl mt-5" >Lista de usuários</h1>
       
       {isError && <FeedBack message="Ooops! Algo deu errado, tente novamente" />}
       {isLoading && <FeedBack message="Carregando os usuários..." />}
+      
       {data &&
         data.map((user) => {
           return (
